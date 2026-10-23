@@ -7,7 +7,7 @@
 # 🔍 Awesome Machine Learning Interpretability (XAI) 🌟
 
 [![Awesome](https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github)](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)<a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-[![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Machine-Learning-Interpretability?style=social&color=white)](https://github.com/ishandutta2007/Awesome-Machine-Learning-Interpretability/stargazers)
+[![GitHub_Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Machine-Learning-Interpretability?style=social&color=white)](https://github.com/ishandutta2007/Awesome-Machine-Learning-Interpretability/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/ishandutta2007/Awesome-Machine-Learning-Interpretability?style=social&color=white)](https://github.com/ishandutta2007/Awesome-Machine-Learning-Interpretability/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Machine-Learning-Interpretability/pulls)
@@ -77,66 +77,66 @@ The following enterprise platforms provide managed dashboards, scalable compute 
 
 ## 💻 Open-Source GitHub Projects
 
-Sorted by GitHub Stars (descending) 🌟 to highlight industry adoption and community vitality.
+Sorted by GitHub_Stars (descending) 🌟 to highlight industry adoption and community vitality.
 
-1. **[SHAP (SHapley Additive exPlanations)](https://github.com/slundberg/shap)** [![GitHub Stars](https://img.shields.io/github/stars/slundberg/shap?style=social&color=white)](https://github.com/slundberg/shap/stargazers)  
+1. **[SHAP (SHapley Additive exPlanations)](https://github.com/slundberg/shap)** [![GitHub_Stars](https://img.shields.io/github/stars/slundberg/shap?style=social&color=white)](https://github.com/slundberg/shap/stargazers)  
    **The game-theoretic attribution standard.** Connects optimal credit allocation with local explanations using Shapley values. Fast TreeSHAP implementation accelerates calculations for XGBoost, LightGBM, and CatBoost. Best for theoretical consistency and production-grade tabular attribution.
 
-2. **[PyTorch Grad-CAM](https://github.com/jacobgil/pytorch-grad-cam)** [![GitHub Stars](https://img.shields.io/github/stars/jacobgil/pytorch-grad-cam?style=social&color=white)](https://github.com/jacobgil/pytorch-grad-cam/stargazers)  
+2. **[PyTorch Grad-CAM](https://github.com/jacobgil/pytorch-grad-cam)** [![GitHub_Stars](https://img.shields.io/github/stars/jacobgil/pytorch-grad-cam?style=social&color=white)](https://github.com/jacobgil/pytorch-grad-cam/stargazers)  
    **Visual AI explanations and saliency maps for PyTorch.** State-of-the-art implementations of GradCAM, GradCAM++, Score-CAM, Eigen-CAM, and LayerCAM across classification, object detection, and semantic segmentation vision architectures.
 
-3. **[LIME (Local Interpretable Model-agnostic Explanations)](https://github.com/marcotcr/lime)** [![GitHub Stars](https://img.shields.io/github/stars/marcotcr/lime?style=social&color=white)](https://github.com/marcotcr/lime/stargazers)  
+3. **[LIME (Local Interpretable Model-agnostic Explanations)](https://github.com/marcotcr/lime)** [![GitHub_Stars](https://img.shields.io/github/stars/marcotcr/lime?style=social&color=white)](https://github.com/marcotcr/lime/stargazers)  
    **The original surrogate explanation engine.** Perturbs input instances to fit sparse, interpretable linear models locally around specific predictions. Best for quick black-box sanity checks across tabular, text, and image domains.
 
-4. **[Evidently AI](https://github.com/evidentlyai/evidently)** [![GitHub Stars](https://img.shields.io/github/stars/evidentlyai/evidently?style=social&color=white)](https://github.com/evidentlyai/evidently/stargazers)  
+4. **[Evidently AI](https://github.com/evidentlyai/evidently)** [![GitHub_Stars](https://img.shields.io/github/stars/evidentlyai/evidently?style=social&color=white)](https://github.com/evidentlyai/evidently/stargazers)  
    **Evaluation and observability for tabular & LLM systems.** Generates interactive visual reports and JSON test suites to detect data drift, concept drift, feature distribution changes, and regression/classification model degradation.
 
-5. **[InterpretML](https://github.com/interpretml/interpret)** [![GitHub Stars](https://img.shields.io/github/stars/interpretml/interpret?style=social&color=white)](https://github.com/interpretml/interpret/stargazers)  
+5. **[InterpretML](https://github.com/interpretml/interpret)** [![GitHub_Stars](https://img.shields.io/github/stars/interpretml/interpret?style=social&color=white)](https://github.com/interpretml/interpret/stargazers)  
    **Microsoft's glassbox and blackbox unified framework.** Houses the **Explainable Boosting Machine (EBM)**—an exact Generalized Additive Model with pairwise interactions (GA²M) that matches the accuracy of Random Forests or GBDTs while preserving 100% global and local interpretability.
 
-6. **[Captum](https://github.com/pytorch/captum)** [![GitHub Stars](https://img.shields.io/github/stars/pytorch/captum?style=social&color=white)](https://github.com/pytorch/captum/stargazers)  
+6. **[Captum](https://github.com/pytorch/captum)** [![GitHub_Stars](https://img.shields.io/github/stars/pytorch/captum?style=social&color=white)](https://github.com/pytorch/captum/stargazers)  
    **PyTorch official model interpretability library.** Provides native, autograd-integrated implementations of Integrated Gradients, DeepLIFT, Guided Backprop, Saliency, Noise Tunnel, and Shapley Value Sampling for complex deep neural networks.
 
-7. **[Lucid](https://github.com/tensorflow/lucid)** [![GitHub Stars](https://img.shields.io/github/stars/tensorflow/lucid?style=social&color=white)](https://github.com/tensorflow/lucid/stargazers)  
+7. **[Lucid](https://github.com/tensorflow/lucid)** [![GitHub_Stars](https://img.shields.io/github/stars/tensorflow/lucid?style=social&color=white)](https://github.com/tensorflow/lucid/stargazers)  
    **Neural network feature visualization and mechanistic interpretability.** Maintained historically by Google Research, Lucid provides infrastructure for generating synthetic visual inputs that maximally activate target neurons and latent channels.
 
-8. **[LIT (Learning Interpretability Tool)](https://github.com/PAIR-code/lit)** [![GitHub Stars](https://img.shields.io/github/stars/PAIR-code/lit?style=social&color=white)](https://github.com/PAIR-code/lit/stargazers)  
+8. **[LIT (Learning Interpretability Tool)](https://github.com/PAIR-code/lit)** [![GitHub_Stars](https://img.shields.io/github/stars/PAIR-code/lit?style=social&color=white)](https://github.com/PAIR-code/lit/stargazers)  
    **Google PAIR's visual interactive model debugging UI.** A visual platform for deep analysis of NLP, vision, and tabular models—supporting counterfactual generation, saliency maps, attention inspection, and slice-based fairness analysis.
 
-9. **[TruLens](https://github.com/truera/trulens)** [![GitHub Stars](https://img.shields.io/github/stars/truera/trulens?style=social&color=white)](https://github.com/truera/trulens/stargazers)  
+9. **[TruLens](https://github.com/truera/trulens)** [![GitHub_Stars](https://img.shields.io/github/stars/truera/trulens?style=social&color=white)](https://github.com/truera/trulens/stargazers)  
    **LLM and RAG explainability & evaluation engine.** Evaluates retrieval-augmented generation pipelines using the "RAG Triad" (context relevance, groundedness, answer relevance) with programmatic feedback functions.
 
-10. **[Shapash](https://github.com/MAIF/shapash)** [![GitHub Stars](https://img.shields.io/github/stars/MAIF/shapash?style=social&color=white)](https://github.com/MAIF/shapash/stargazers)  
+10. **[Shapash](https://github.com/MAIF/shapash)** [![GitHub_Stars](https://img.shields.io/github/stars/MAIF/shapash?style=social&color=white)](https://github.com/MAIF/shapash/stargazers)  
     **Human-friendly explanation dashboards.** Built by MAIF, Shapash wraps SHAP and LightGBM/XGBoost to present non-technical stakeholders with clean visual summaries, explicit feature labels, and standalone web reports.
 
-11. **[AIF360 (AI Fairness 360)](https://github.com/Trusted-AI/AIF360)** [![GitHub Stars](https://img.shields.io/github/stars/Trusted-AI/AIF360?style=social&color=white)](https://github.com/Trusted-AI/AIF360/stargazers)  
+11. **[AIF360 (AI Fairness 360)](https://github.com/Trusted-AI/AIF360)** [![GitHub_Stars](https://img.shields.io/github/stars/Trusted-AI/AIF360?style=social&color=white)](https://github.com/Trusted-AI/AIF360/stargazers)  
     **IBM's extensible algorithmic bias and fairness toolkit.** Offers over 70 fairness metrics and 10 state-of-the-art bias mitigation algorithms across pre-processing (reweighing), in-processing (adversarial debiasing), and post-processing steps.
 
-12. **[ELI5](https://github.com/TeamHG-Memex/eli5)** [![GitHub Stars](https://img.shields.io/github/stars/TeamHG-Memex/eli5?style=social&color=white)](https://github.com/TeamHG-Memex/eli5/stargazers)  
+12. **[ELI5](https://github.com/TeamHG-Memex/eli5)** [![GitHub_Stars](https://img.shields.io/github/stars/TeamHG-Memex/eli5?style=social&color=white)](https://github.com/TeamHG-Memex/eli5/stargazers)  
     **Python package for debugging ML classifiers.** Quick visualization and inspection of weights, decision trees, TextExplainer highlighting for NLP classifiers, and Permutation Importance for scikit-learn models.
 
-13. **[whylogs](https://github.com/whylabs/whylogs)** [![GitHub Stars](https://img.shields.io/github/stars/whylabs/whylogs?style=social&color=white)](https://github.com/whylabs/whylogs/stargazers)  
+13. **[whylogs](https://github.com/whylabs/whylogs)** [![GitHub_Stars](https://img.shields.io/github/stars/whylabs/whylogs?style=social&color=white)](https://github.com/whylabs/whylogs/stargazers)  
     **Statistical data profiling standard for AI pipelines.** Generates lightweight, mergeable statistical sketches of input data distributions and model predictions without copying raw data, enabling privacy-preserving drift auditing.
 
-14. **[Alibi Explain](https://github.com/SeldonIO/alibi)** [![GitHub Stars](https://img.shields.io/github/stars/SeldonIO/alibi?style=social&color=white)](https://github.com/SeldonIO/alibi/stargazers)  
+14. **[Alibi Explain](https://github.com/SeldonIO/alibi)** [![GitHub_Stars](https://img.shields.io/github/stars/SeldonIO/alibi?style=social&color=white)](https://github.com/SeldonIO/alibi/stargazers)  
     **Seldon's enterprise explanation library.** Specializes in Anchor explanations, Counterfactual instances ("what needs to change for the loan to be approved?"), Integrated Gradients, and trust scores.
 
-15. **[AIX360 (AI Explainability 360)](https://github.com/Trusted-AI/AIX360)** [![GitHub Stars](https://img.shields.io/github/stars/Trusted-AI/AIX360?style=social&color=white)](https://github.com/Trusted-AI/AIX360/stargazers)  
+15. **[AIX360 (AI Explainability 360)](https://github.com/Trusted-AI/AIX360)** [![GitHub_Stars](https://img.shields.io/github/stars/Trusted-AI/AIX360?style=social&color=white)](https://github.com/Trusted-AI/AIX360/stargazers)  
     **IBM's unified multi-method explainability suite.** Implements contrastive explanations, Boolean rule sets, Generalized Additive Models, and protodash prototypes for all lifecycle stages of machine learning models.
 
-16. **[DiCE (Diverse Counterfactual Explanations)](https://github.com/interpretml/diCE)** [![GitHub Stars](https://img.shields.io/github/stars/interpretml/diCE?style=social&color=white)](https://github.com/interpretml/diCE/stargazers)  
+16. **[DiCE (Diverse Counterfactual Explanations)](https://github.com/interpretml/diCE)** [![GitHub_Stars](https://img.shields.io/github/stars/interpretml/diCE?style=social&color=white)](https://github.com/interpretml/diCE/stargazers)  
     **Microsoft's counterfactual explanation engine.** Generates diverse, feasible counterfactual sets showing actionable paths to change a model's prediction while satisfying feature feasibility constraints.
 
-17. **[DALEX](https://github.com/ModelOriented/DALEX)** [![GitHub Stars](https://img.shields.io/github/stars/ModelOriented/DALEX?style=social&color=white)](https://github.com/ModelOriented/DALEX/stargazers)  
+17. **[DALEX](https://github.com/ModelOriented/DALEX)** [![GitHub_Stars](https://img.shields.io/github/stars/ModelOriented/DALEX?style=social&color=white)](https://github.com/ModelOriented/DALEX/stargazers)  
     **Model-agnostic exploratory explainability.** Dual-ecosystem toolkit (available in Python and R) for break-down plots, variable importance measures, Ceteris Paribus curves, and fairness auditing.
 
-18. **[TensorFlow Model Analysis (TFMA)](https://github.com/tensorflow/model-analysis)** [![GitHub Stars](https://img.shields.io/github/stars/tensorflow/model-analysis?style=social&color=white)](https://github.com/tensorflow/model-analysis/stargazers)  
+18. **[TensorFlow Model Analysis (TFMA)](https://github.com/tensorflow/model-analysis)** [![GitHub_Stars](https://img.shields.io/github/stars/tensorflow/model-analysis?style=social&color=white)](https://github.com/tensorflow/model-analysis/stargazers)  
     **TFX ecosystem evaluation tool.** Evaluates models across customized slices of data, validating fairness metrics, tracking performance degradation across iterations, and spotting slice-specific blindspots.
 
-19. **[tf-explain](https://github.com/sicara/tf-explain)** [![GitHub Stars](https://img.shields.io/github/stars/sicara/tf-explain?style=social&color=white)](https://github.com/sicara/tf-explain/stargazers)  
+19. **[tf-explain](https://github.com/sicara/tf-explain)** [![GitHub_Stars](https://img.shields.io/github/stars/sicara/tf-explain?style=social&color=white)](https://github.com/sicara/tf-explain/stargazers)  
     **Interpretability methods for TensorFlow 2.x and Keras.** Implements Grad-CAM, Integrated Gradients, SmoothGrad, Vanilla Gradients, and Occlusion Sensitivity with native Keras callback integrations.
 
-20. **[What-If Tool](https://github.com/PAIR-code/what-if-tool)** [![GitHub Stars](https://img.shields.io/github/stars/PAIR-code/what-if-tool?style=social&color=white)](https://github.com/PAIR-code/what-if-tool/stargazers)  
+20. **[What-If Tool](https://github.com/PAIR-code/what-if-tool)** [![GitHub_Stars](https://img.shields.io/github/stars/PAIR-code/what-if-tool?style=social&color=white)](https://github.com/PAIR-code/what-if-tool/stargazers)  
     **Google PAIR's visual interactive probing widget.** Seamlessly integrates into Jupyter and TensorBoard to test edge cases, probe dataset slices, and analyze algorithmic counterfactuals without writing code.
 
 ---
@@ -147,7 +147,7 @@ Contributions are warmly welcomed! Help keep this repository comprehensive, fact
 
 1. **Fork** the repository.
 2. **Add or refine** tools in `README.md` (keep descriptions concise, objective, and include proper pricing/license metadata).
-3. Ensure every open-source repository includes a star badge formatted as `[![GitHub Stars](https://img.shields.io/github/stars/owner/repo?style=social&color=white)](https://github.com/owner/repo/stargazers)`.
+3. Ensure every open-source repository includes a Stars_Badge formatted as `[![GitHub_Stars](https://img.shields.io/github/stars/owner/repo?style=social&color=white)](https://github.com/owner/repo/stargazers)`.
 4. Open a **Pull Request** detailing your changes.
 
 ---
