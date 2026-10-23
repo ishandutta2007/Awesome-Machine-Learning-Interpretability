@@ -1,7 +1,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="assets/banner.svg" alt="Awesome Machine Learning Interpretability Banner" width="100%" />
+  <img src="./assets/banner.svg" alt="Awesome Machine Learning Interpretability Banner" width="100%">
 </p>
 
 # 🔍 Awesome Machine Learning Interpretability (XAI) 🌟
