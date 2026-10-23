@@ -42,33 +42,18 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-
-
-| Product | Description | Pricing | Free Tier Limit |
-
-| :--- | :--- | :--- | :--- |
-
-| **[Arize AI](https://arize.com/)** | AI observability platform with explainability for tabular and LLM models. | **AX Pro**: **$50/month** . **AX Enterprise**: custom, with self-hosted deployment option . | **AX Free**: 25k spans/month, 1 GB storage, 15-day retention, unlimited users, unlimited evaluations . |
-
-| **[Arthur AI](https://www.arthur.ai/)** | AI governance platform with explainability, fairness, and "What-If" analysis. | **Premium**: **$60/month** . **Enterprise**: custom (VPC, SSO, SLAs) . | **Free**: 4 use cases, 1 org, 1 workspace, 300k spans, 12k inferences, 7-day retention, unlimited seats . |
-
-| **[Fiddler AI](https://www.fiddler.ai/)** | Model performance monitoring and explainable AI platform with decoupled pricing for monitoring, explainability, and fairness. | Usage-based with annual commitment. Metrics: data ingested, models, explanations, retention months. **Lite** and **Standard** plans; contact sales for estimate . | No permanent free tier. **Pricing estimate available** via sales request . |
-
-| **[TruEra (Snowflake)](https://www.truera.com/)** | AI observability and explainability platform. **Acquired by Snowflake (May 2024)**. | **TruLens (open-source)**: free under Apache 2.0. **Commercial**: now billed via Snowflake credits as part of Cortex/AI Observability . | **TruLens**: fully free and open-source. **Legacy TruEra**: no standalone free tier; access via Snowflake trial credits. |
-
-| **[WhyLabs](https://whylabs.ai/)** | AI observability platform. **Transitioned to fully open-source** (Apache 2.0) after Apple acquisition (2025). | **Open Source**: Free (entire platform including whylogs and langkit). Legacy SaaS tiers on AWS Marketplace: $100/mo (2 models), $200/mo (3 models), Enterprise $8,333/mo . | **Entire platform is now free and open-source**. Legacy "1 Model" tier remains on marketplace . |
-
-| **[H2O.ai](https://h2o.ai/)** | Enterprise AI platform with Driverless AI (AutoML) including built-in interpretability (variable importance, reason codes). | **H2O-3**: free (Apache 2.0). **Driverless AI**: enterprise licensing, typically **from $10,000/year** . | **H2O-3**: fully free. **Driverless AI**: free trial available; no permanent free tier . |
-
-| **[DataRobot](https://www.datarobot.com/)** | Automated ML platform with prediction explanations and model interpretation built into deployments. | **Pricing 5.0 (Classic MLOps)**: contact sales; no public list prices . | No public free tier. Trial available via sales engagement. |
-
-| **[Dataiku](https://www.dataiku.com/)** | Collaborative data science platform with visual and code-based workflows, including model interpretability features. | **Highly customized**, typically **$150K–$300K+ for 25 users/year** for enterprise deployment . | **14-day Cloud Trial**: 5 users, all features except Govern/advanced LLM Mesh. **Free Edition** for on-prem (feature-restricted). |
-
-| **[Alteryx](https://www.alteryx.com/)** | Data analytics platform with predictive tools including interpretability features. | Designer licenses **~$5,195+/user/year**; **25 users, 1 year: $100K–$150K** . | **30-day free trial**. No permanent free tier. |
-
-| **[IBM Watson OpenScale](https://www.ibm.com/products/watson-openscale)** | AI governance and explainability platform for monitoring model fairness and drift. | Contact vendor for pricing; Capterra lists a **$49 flat rate** (likely legacy/limited offering) . | No public free tier details available. |
-
-
+| Product | Description | Company Scale / Valuation / Revenue | Pricing | Free Tier Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| **[IBM Watson OpenScale](https://www.ibm.com/products/watson-openscale)** | AI governance and explainability platform for monitoring model fairness, drift, and explanations. | **~$235B Market Cap** (~$67.5B FY revenue) | **Essentials tier**: **$0.60 per Resource Unit (RU)** on IBM Cloud; **Risk & Compliance**: from **$3,500/month** | **Lite Plan (Free forever)**: 1 instance, up to 50,000 transaction rows for debiasing/evaluations, internal managed DB |
+| **[TruEra (Snowflake)](https://www.truera.com/)** | AI observability and explainability platform. Acquired by Snowflake (May 2024); integrated into Snowflake Cortex. | **~$115B Market Cap** (Snowflake parent; ~$4.7B+ revenue) | **Snowflake Cortex / Observability**: billed via Snowflake credits; Standard edition starts at **~$2.00–$3.00/credit**; TruLens open-source is **$0** (Apache 2.0) | **30-day free trial**: includes **$400 in usage credits** for virtual warehouses and cloud storage (no permanent free tier for hosted platform) |
+| **[DataRobot](https://www.datarobot.com/)** | Automated ML platform with prediction explanations and model interpretation built into deployments. | **$6.3B Valuation** (~$250M+ ARR) | Entry-level commercial contracts start from **~$50,000/year** (custom quote-based on modeling workers and prediction volume) | **30-day SaaS trial**: shared modeling workers, capped at 1,000 LLM calls, 15 vector DBs, batch predictions only (no GPU/NIM) |
+| **[Alteryx](https://www.alteryx.com/)** | Data analytics and ML platform with interactive predictive tools and model explainability features. | **$4.4B Valuation** (Acquired/Private; ~$970M revenue) | **Designer Desktop**: starts at **$5,195/user/year**; enterprise team bundles typically start around **$100,000/year** (25 users) | **30-day free trial**: 1 trial workspace, up to 10 invited team members, full Enterprise Designer feature set (expires after 30 days) |
+| **[Dataiku](https://www.dataiku.com/)** | Collaborative data science and AI platform with AutoML, model diagnostics, and visual model interpretability. | **$3.7B Valuation** (~$350M+ ARR) | Enterprise tiers typically range from **$150,000–$300,000/year** for 25 users; **Discover Cloud tier**: starting around **$1,500/month** | **Free Edition (Self-hosted, free forever)**: up to 3 users, full Visual ML/AutoML and local compute (excludes automated API/batch deployment nodes). **Cloud Trial**: 14 days, up to 5 users |
+| **[H2O.ai](https://h2o.ai/)** | Enterprise AI platform with Driverless AI providing automatic interpretability (variable importance, Shapley values, reason codes). | **$1.7B Valuation** (~$75M ARR) | **Driverless AI**: enterprise licensing starting from **$10,000/year**; **H2O-3** is **$0** (free, Apache 2.0) | **21-day free trial**: full Driverless AI license key in cloud or on-prem. Also offers a 2-hour instant test drive on Aquarium Cloud |
+| **[Arize AI](https://arize.com/)** | AI observability platform with explainability for tabular models and LLM applications. | **$915M Valuation** (Acquired by Dynatrace, Aug 2026; ~$45M ARR) | **AX Pro**: **$50/month**; **AX Enterprise**: custom quote with self-hosted / VPC deployment option | **AX Free (Free forever)**: 25k spans/month, 1 GB storage, 15-day data retention, unlimited users, unlimited evaluations |
+| **[Fiddler AI](https://www.fiddler.ai/)** | Model performance monitoring and explainable AI platform with decoupled pricing for monitoring, explainability, and fairness. | **~$100M Funding** (Venture-backed Series C) | **Lite Tier (AWS Marketplace)**: starts from **~$2,000/month** ($24,000/year) for 1 model and 0.5 GB/month; custom enterprise quotes for scaled workloads | **30-day free trial**: up to 5 models via AWS SageMaker Partner AI Apps integration; 14-day trial for standalone Guardrails API |
+| **[WhyLabs](https://whylabs.ai/)** | AI observability and data drift tracking platform. Transitioned to open source post-Apple acquisition. | **~$37M Valuation** (Acquired by Apple, 2025; raised $14M total) | **Open Source**: **$0** (entire platform including whylogs and langkit); Legacy AWS Marketplace tiers start at **$100/month** (2 models) | **Free forever**: core platform is 100% free and open-source under Apache 2.0. Legacy SaaS tier offers 1 free model on marketplace |
+| **[Arthur AI](https://www.arthur.ai/)** | AI governance platform with explainability, fairness auditing, and "What-If" analysis. | **~$30M–$50M Valuation** (Raised ~$60M total venture funding) | **Premium**: **$60/month**; **Enterprise**: custom quote (dedicated VPC, custom SLAs, SSO) | **Free Tier (Free forever)**: 4 use cases, 1 organization, 1 workspace, 300k spans, 12k inferences, 7-day retention, unlimited seats |
 
 ## Open-Source GitHub Projects
 
