@@ -1,113 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0a0f1d" />
       <stop offset="50%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#1e1b4b" />
     </linearGradient>
 
-    <!-- Glowing Text Gradient -->
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
       <stop offset="50%" stop-color="#818cf8" />
       <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
 
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.8"/>
-    </linearGradient>
-
     <!-- Node Glow Filter -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="6" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <filter id="subtleGlow">
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
   <style>
-    .bg { fill: url(#bgGrad); }
-    .grid-line { stroke: #1e293b; stroke-width: 1; opacity: 0.4; }
-    
-    /* Dynamic pulsing & flowing animations */
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.35; transform: scale(1); }
-      50% { opacity: 0.75; transform: scale(1.08); }
+    .neural-line {
+      stroke-dasharray: 8 12;
+      animation: dashMove 20s linear infinite;
     }
     @keyframes dashMove {
-      to { stroke-dashoffset: -40; }
-    }
-    @keyframes floatOrb1 {
-      0%, 100% { transform: translate(0px, 0px); }
-      50% { transform: translate(25px, -15px); }
-    }
-    @keyframes floatOrb2 {
-      0%, 100% { transform: translate(0px, 0px); }
-      50% { transform: translate(-30px, 20px); }
-    }
-    @keyframes floatPill {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-6px); }
-    }
-    @keyframes waveFlow {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-600px); }
-    }
-
-    .animated-dash {
-      stroke-dasharray: 8, 6;
-      animation: dashMove 3s linear infinite;
-    }
-    .orb-1 {
-      animation: floatOrb1 7s ease-in-out infinite;
-      transform-origin: 200px 100px;
-    }
-    .orb-2 {
-      animation: floatOrb2 9s ease-in-out infinite;
-      transform-origin: 1000px 260px;
-    }
-    .pill-anim-1 {
-      animation: floatPill 4s ease-in-out infinite;
-    }
-    .pill-anim-2 {
-      animation: floatPill 5s ease-in-out infinite 1s;
-    }
-    .pill-anim-3 {
-      animation: floatPill 4.5s ease-in-out infinite 0.5s;
+      from { stroke-dashoffset: 200; }
+      to { stroke-dashoffset: 0; }
     }
     .pulse-node {
-      animation: pulseGlow 3s ease-in-out infinite;
-      transform-origin: center;
+      animation: pulse 3s ease-in-out infinite alternate;
+    }
+    @keyframes pulse {
+      0% { r: 5px; opacity: 0.4; }
+      100% { r: 9px; opacity: 0.9; }
+    }
+    .floating-pill {
+      animation: float 6s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-10px); }
+    }
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
     }
   </style>
 
-  <!-- Canvas Background -->
-  <rect width="1200" height="360" rx="16" class="bg" />
+  <!-- Deep Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
 
-  <!-- Background Animated Atmospheric Orbs -->
-  <g class="orb-1" opacity="0.35">
-    <circle cx="180" cy="90" r="130" fill="#38bdf8" filter="url(#glow)" opacity="0.25" />
-    <circle cx="280" cy="140" r="90" fill="#6366f1" filter="url(#glow)" opacity="0.2" />
-  </g>
-  <g class="orb-2" opacity="0.35">
-    <circle cx="1020" cy="270" r="140" fill="#a855f7" filter="url(#glow)" opacity="0.2" />
-    <circle cx="920" cy="200" r="100" fill="#06b6d4" filter="url(#glow)" opacity="0.25" />
-  </g>
-
-  <!-- Technical Grid Background -->
-  <g class="grid-line">
+  <!-- Subtle Grid lines -->
+  <g opacity="0.12" stroke="#38bdf8" stroke-width="1">
     <line x1="0" y1="60" x2="1200" y2="60" />
     <line x1="0" y1="120" x2="1200" y2="120" />
     <line x1="0" y1="180" x2="1200" y2="180" />
@@ -122,69 +87,85 @@
     <line x1="1050" y1="0" x2="1050" y2="360" />
   </g>
 
-  <!-- Dynamic Neural/Decision Attributions (Flow lines in background) -->
-  <g opacity="0.5">
-    <!-- Connecting curves with animated dashes -->
-    <path d="M 80,180 C 220,90 320,240 460,180" fill="none" stroke="#38bdf8" stroke-width="2" class="animated-dash" />
-    <path d="M 740,180 C 880,120 980,270 1120,180" fill="none" stroke="#c084fc" stroke-width="2" class="animated-dash" />
-    <path d="M 120,280 C 250,330 350,210 500,260" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,4" />
-    <path d="M 700,100 C 850,50 950,150 1080,100" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="4,4" />
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="80" r="120" fill="#38bdf8" opacity="0.08" filter="url(#glow)" />
+  <circle cx="1000" cy="280" r="150" fill="#a855f7" opacity="0.09" filter="url(#glow)" />
+
+  <!-- Animated Neural/Interpretability Flow Layer (Background Network) -->
+  <g opacity="0.35">
+    <!-- Connecting flow paths -->
+    <path d="M 80,180 Q 250,50 420,160 T 780,140 T 1120,200" fill="none" stroke="#38bdf8" stroke-width="2" class="neural-line" />
+    <path d="M 100,280 Q 320,340 550,220 T 920,260 T 1150,110" fill="none" stroke="#818cf8" stroke-width="2" class="neural-line" />
+    <path d="M 50,80 Q 280,240 600,100 T 1050,180" fill="none" stroke="#c084fc" stroke-width="1.5" class="neural-line" />
   </g>
 
-  <!-- Interactive/Dynamic Feature Attribution Nodes (Glassbox & SHAP representation) -->
-  <g class="pulse-node" opacity="0.8">
-    <circle cx="100" cy="180" r="6" fill="#38bdf8" filter="url(#subtleGlow)" />
-    <circle cx="460" cy="180" r="5" fill="#38bdf8" />
-    <circle cx="740" cy="180" r="5" fill="#c084fc" />
-    <circle cx="1100" cy="180" r="6" fill="#c084fc" filter="url(#subtleGlow)" />
+  <!-- Pulsing Nodes (Background feature attribution points) -->
+  <g>
+    <circle cx="120" cy="180" fill="#38bdf8" class="pulse-node" filter="url(#subtleGlow)" />
+    <circle cx="280" cy="100" fill="#818cf8" class="pulse-node" style="animation-delay: -1s;" filter="url(#subtleGlow)" />
+    <circle cx="420" cy="160" fill="#c084fc" class="pulse-node" style="animation-delay: -2s;" filter="url(#subtleGlow)" />
+    <circle cx="780" cy="140" fill="#38bdf8" class="pulse-node" style="animation-delay: -0.5s;" filter="url(#subtleGlow)" />
+    <circle cx="950" cy="250" fill="#818cf8" class="pulse-node" style="animation-delay: -1.5s;" filter="url(#subtleGlow)" />
+    <circle cx="1080" cy="120" fill="#c084fc" class="pulse-node" style="animation-delay: -2.5s;" filter="url(#subtleGlow)" />
   </g>
 
-  <!-- Dynamic Attribution Bars / Feature Importance Representation (Bottom-left & Bottom-right) -->
-  <g opacity="0.4">
-    <!-- Left Feature Bar Group -->
-    <rect x="70" y="295" width="80" height="6" rx="3" fill="#38bdf8" />
-    <rect x="70" y="307" width="120" height="6" rx="3" fill="#818cf8" />
-    <rect x="70" y="319" width="55" height="6" rx="3" fill="#06b6d4" />
-    <!-- Right Feature Bar Group -->
-    <rect x="1030" y="295" width="100" height="6" rx="3" fill="#c084fc" />
-    <rect x="990" y="307" width="140" height="6" rx="3" fill="#818cf8" />
-    <rect x="1060" y="319" width="70" height="6" rx="3" fill="#38bdf8" />
+  <!-- Side Floating Pill Tags (Kept strictly on peripheral sides to protect title & subtitle clarity) -->
+  <g class="floating-pill" opacity="0.85">
+    <!-- Left Feature Tag -->
+    <rect x="50" y="45" width="125" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+    <circle cx="66" cy="60" r="4" fill="#38bdf8" />
+    <text x="80" y="65" class="badge-text">SHAP / LIME</text>
   </g>
 
-  <!-- Badges / Floating Concept Pills (Foreground, Above Background, Below Titles) -->
-  <g class="pill-anim-1">
-    <rect x="430" y="42" width="100" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.9" />
-    <text x="480" y="59" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">SHAP &amp; LIME</text>
+  <g class="floating-pill" style="animation-delay: -3s;" opacity="0.85">
+    <!-- Right Feature Tag -->
+    <rect x="1015" y="45" width="135" height="30" rx="15" fill="#1e293b" stroke="#a855f7" stroke-width="1.2" />
+    <circle cx="1031" cy="60" r="4" fill="#c084fc" />
+    <text x="1045" y="65" class="badge-text">Glassbox AI</text>
   </g>
 
-  <g class="pill-anim-2">
-    <rect x="545" y="42" width="110" height="26" rx="13" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" opacity="0.9" />
-    <text x="600" y="59" fill="#818cf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">GLASSBOX / EBM</text>
+  <!-- FOREGROUND CONTENT: Header, Badge, Title, Subtitle, Highlights -->
+  <!-- Top Pill Badge -->
+  <g transform="translate(600, 68)">
+    <rect x="-140" y="-18" width="280" height="34" rx="17" fill="#1e293b" stroke="url(#accentGrad)" stroke-width="1.5" />
+    <text x="0" y="4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="12" fill="#38bdf8" letter-spacing="1.5">
+      CURATED ECOSYSTEM 2026
+    </text>
   </g>
 
-  <g class="pill-anim-3">
-    <rect x="670" y="42" width="100" height="26" rx="13" fill="#1e293b" stroke="#c084fc" stroke-width="1.2" opacity="0.9" />
-    <text x="720" y="59" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">XAI &amp; FAIRNESS</text>
-  </g>
-
-  <!-- MAIN HEADINGS (Unobstructed Foreground) -->
-  <!-- Title -->
-  <text x="600" y="152" fill="url(#titleGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" text-anchor="middle" letter-spacing="-0.5" filter="url(#subtleGlow)">
+  <!-- Main Title -->
+  <text x="600" y="145" text-anchor="middle" class="title-text" font-size="44">
     Awesome Machine Learning Interpretability
   </text>
 
   <!-- Subtitle -->
-  <text x="600" y="196" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" letter-spacing="0.2">
-    Curated Hub for Explainable AI (XAI), Attribution Frameworks &amp; Model Auditing Tools
+  <text x="600" y="190" text-anchor="middle" class="subtitle-text" font-size="19">
+    Explainable AI (XAI) &bull; Attribution Frameworks &bull; Model Auditing &bull; Fairness Toolkits
   </text>
 
-  <!-- Tagline / Description -->
-  <text x="600" y="232" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle">
-    Transparent Glassbox Models &bull; Post-Hoc Explainers &bull; Fairness Auditing &bull; Enterprise Governance SaaS
-  </text>
+  <!-- Foreground Feature Highlights Pill Bar -->
+  <g transform="translate(600, 245)">
+    <!-- Pill 1 -->
+    <rect x="-370" y="0" width="170" height="38" rx="19" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <circle cx="-350" cy="19" r="5" fill="#38bdf8" />
+    <text x="-275" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#cbd5e1">Feature Attribution</text>
 
-  <!-- Subtle Bottom Indicator -->
-  <g opacity="0.8">
-    <line x1="480" y1="262" x2="720" y2="262" stroke="url(#titleGrad)" stroke-width="2" stroke-linecap="round" />
+    <!-- Pill 2 -->
+    <rect x="-180" y="0" width="170" height="38" rx="19" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <circle cx="-160" cy="19" r="5" fill="#818cf8" />
+    <text x="-85" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#cbd5e1">Model Governance</text>
+
+    <!-- Pill 3 -->
+    <rect x="10" y="0" width="170" height="38" rx="19" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <circle cx="30" cy="19" r="5" fill="#c084fc" />
+    <text x="105" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#cbd5e1">Fairness &amp; Auditing</text>
+
+    <!-- Pill 4 -->
+    <rect x="200" y="0" width="170" height="38" rx="19" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <circle cx="220" cy="19" r="5" fill="#34d399" />
+    <text x="295" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#cbd5e1">EU AI Act Ready</text>
   </g>
+
+  <!-- Bottom Accent Border Strip -->
+  <rect x="0" y="354" width="1200" height="6" rx="3" fill="url(#accentGrad)" />
 </svg>
